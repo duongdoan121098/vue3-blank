@@ -1,0 +1,53 @@
+{
+  "name": "vue-vite-3",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --ext .js --fix",
+    "format": "prettier --write src/",
+    "prepare": "husky install",
+    "dev": "mode=dev vite",
+    "qa": "mode=qa vite",
+    "prod": "mode=prod vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "start": "node vueBaseAppServer.js"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "axios": "^1.3.4",
+    "bootstrap": "^5.2.3",
+    "compression": "^1.7.4",
+    "dotenv": "^16.0.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "os": "^0.1.2",
+    "pinia": "^2.0.32",
+    "vue": "^3.2.47",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6",
+    "yargs": "^17.7.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "eslint": "^8.35.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.2",
+    "prettier": "2.8.4",
+    "sass": "^1.58.3",
+    "vite": "^4.1.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
